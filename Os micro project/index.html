@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRT Scheduler Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>SRT Scheduling Simulator</h1>
+        
+        <div class="control-panel">
+            <div class="process-input">
+                <h3>Add Process</h3>
+                <input type="number" id="pid" placeholder="Process ID" min="1">
+                <input type="number" id="arrival" placeholder="Arrival Time" min="0">
+                <input type="number" id="burst" placeholder="Burst Time" min="1">
+                <button id="add-btn">Add Process</button>
+            </div>
+            
+            <div class="simulation-controls">
+                <button id="start-btn">Start Simulation</button>
+                <button id="reset-btn">Reset</button>
+                <div class="time-display">Current Time: <span id="current-time">0</span></div>
+            </div>
+        </div>
+        
+        <div class="visualization">
+            <div class="gantt-chart" id="gantt-chart"></div>
+            <div class="process-table" id="process-table"></div>
+        </div>
+        
+        <div class="metrics">
+            <h3>Performance Metrics</h3>
+            <p>Average Waiting Time: <span id="avg-wait">0.00</span></p>
+            <p>Average Turnaround Time: <span id="avg-turnaround">0.00</span></p>
+        </div>
+    </div>
+
+    <script src="process.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
